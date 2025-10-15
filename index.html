@@ -1,21 +1,52 @@
-<!-- test -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>은노 윤 · Math EdTech Contents Planner</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Yun Eunno · Math EdTech Contents Planner — 아이들이 즐겁게 등교하도록, 수학을 경험으로 디자인합니다.">
+  <link rel="icon" href="./assets/favicon.png">
+  <meta property="og:title" content="은노 윤 · Math EdTech Contents Planner">
+  <meta property="og:description" content="아이들이 즐겁게 등교하도록, 수학을 경험으로 디자인합니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/profile.jpg">
+  <meta property="og:url" content="https://your-domain.example/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Yun Eunno",
+    "jobTitle":"Math EdTech Contents Planner",
+    "email":"mailto:dmssh2000911@gmail.com",
+    "telephone":"+821066290655",
+    "image":"./assets/profile.jpg",
+    "url":"https://your-domain.example/"
+  }
+  </script>
+
   <style>
-    :root{--bg:#f8fafc;--panel:#ffffff;--muted:#cbd5e0;--accent:#63b3ed;--text:#1a202c;--text-dim:#4a5568;--edge:#e2e8f0;--glow:0 0 12px rgba(99,179,237,.25)}
+    :root{
+      --bg:#f8fafc; --panel:#ffffff; --muted:#94a3b8;
+      --accent:#63b3ed; --text:#1a202c; --text-dim:#475569;
+      --edge:#cbd5e1; 
+      --glow:0 0 12px rgba(99,179,237,.25)
+    }
     *{box-sizing:border-box} html,body{height:100%}
     body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
     a{color:var(--accent);text-decoration:none} a:hover{opacity:.9}
     .wrap{max-width:1100px;margin:0 auto;padding:32px}
 
-    header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(6px);border-bottom:1px solid var(--edge);z-index:20}
+    header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(6px);border-bottom:2px solid var(--edge);z-index:20}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
     .brand{display:flex;align-items:center;gap:12px}
     .logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#4fd1c5);box-shadow:var(--glow)}
@@ -23,59 +54,276 @@
     .nav a{color:var(--text-dim);margin-left:18px;font-size:14px}.nav a:hover{color:var(--accent)}
 
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:52px 0}
-    .hero img{width:100%;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.1);object-fit:cover}
+    .hero img{width:100%;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.1);object-fit:cover;will-change:transform}
     .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(99,179,237,.1);border:1px solid rgba(99,179,237,.3);color:var(--accent);padding:6px 10px;border-radius:999px;font-size:12px;letter-spacing:.3px}
     .title{font-family:Orbitron,Inter,sans-serif;font-weight:700;font-size:40px;margin:14px 0 10px;color:var(--text)}
     .subtitle{color:var(--text-dim);max-width:720px}
     .cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;border:none;border-radius:12px;padding:12px 16px;font-weight:700;box-shadow:var(--glow);cursor:pointer}
-    .btn.secondary{background:transparent;color:var(--text);border:1px solid var(--edge)}
+    .btn.secondary{background:transparent;color:var(--text);border:2px solid var(--edge)}
 
-    .panel{background:var(--panel);border:1px solid var(--edge);border-radius:16px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
-    section{padding:36px 0;border-top:1px solid var(--edge);scroll-margin-top:72px}
+    .panel{background:var(--panel);border:2px solid var(--edge);border-radius:16px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.05);will-change:transform,opacity}
+    section{padding:36px 0;border-top:2px solid var(--edge);scroll-margin-top:72px}
     h2{font-family:Orbitron,Inter,sans-serif;font-weight:700;font-size:22px;margin:0 0 14px;color:var(--text)}
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .chips{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{font-size:12px;border:1px solid var(--edge);padding:6px 10px;border-radius:999px;background:rgba(99,179,237,.08);color:var(--text-dim)}
+    .chip{font-size:12px;border:2px solid var(--edge);padding:6px 10px;border-radius:999px;background:rgba(99,179,237,.08);color:var(--text-dim)}
 
-    .tooltip{position:relative;cursor:help;color:var(--accent)}
-    .tooltiptext{visibility:hidden;width:240px;background:var(--text);color:#fff;text-align:left;border-radius:8px;padding:10px 12px;position:absolute;z-index:1;bottom:125%;left:0;opacity:0;transition:opacity .25s ease;font-size:12px;line-height:1.4;box-shadow:0 6px 18px rgba(0,0,0,.12)}
-    .tooltip:hover .tooltiptext{visibility:visible;opacity:1}
+  
 
-    /* Timeline */
-    .timeline{position:relative;padding-left:40px}
-    .timeline:before{content:"";position:absolute;left:18px;top:0;bottom:0;width:2px;background:linear-gradient(var(--accent),transparent)}
-    .tl-item{position:relative;margin:14px 0 18px;padding-left:24px}
-    .tl-item:before{content:"";position:absolute;left:6px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:var(--glow)}
-    .date{color:var(--text-dim);font-size:12px;margin-top:6px}
+    /* ===== 기본정보 카드 (다크모드 대응) ===== */
+.bio-card {
+  display:grid;
+  grid-template-columns:220px 1fr;
+  border:2px solid var(--edge);
+  border-radius:16px;
+  background:var(--panel);
+  overflow:hidden;
+}
+.bio-photo {
+  border-right:2px solid var(--edge);
+  display:flex; align-items:center; justify-content:center;
+  background:var(--bg);
+  padding:16px;
+}
+.bio-photo img {
+  width:160px; height:200px; object-fit:cover;
+  border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+.bio-table {
+  display:grid;
+  grid-template-columns:200px 1fr;
+  border-collapse:collapse;
+}
+.bio-table .th {
+  background:color-mix(in srgb, var(--panel) 80%, var(--bg) 20%);
+  border-right:2px solid var(--edge);
+  border-bottom:2px solid var(--edge);
+  padding:12px 14px;
+  font-weight:700;
+  color:var(--text);
+}
+.bio-table .td {
+  border-bottom:2px solid var(--edge);
+  padding:12px 14px;
+  color:var(--text);
+}
 
-    /* Slider — absolute 제거, 안정적 레이아웃 */
+/* ===== 주요 활동 표 (다크모드 대응) ===== */
+.activities-table {
+  display:grid;
+  grid-template-columns:260px 1fr;
+  border:2px solid var(--edge);
+  border-radius:16px;
+  overflow:hidden;
+  background:var(--panel);
+}
+.activities-table .th {
+  background:color-mix(in srgb, var(--panel) 80%, var(--bg) 20%);
+  border-right:2px solid var(--edge);
+  border-bottom:2px solid var(--edge);
+  padding:12px 14px;
+  font-weight:700;
+  color:var(--text);
+}
+.activities-table .td {
+  border-bottom:2px solid var(--edge);
+  padding:12px 14px;
+  color:var(--text);
+}
+
+    /* Slider */
     .slider{position:relative;width:100%;aspect-ratio:16/9;max-height:560px;background:#f1f5f9;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1);margin-top:12px;overflow:hidden}
     .slides{display:flex;height:100%;transition:transform .5s ease;transform:translateX(0)}
     .slide-frame{flex:0 0 100%;height:100%;display:flex;align-items:center;justify-content:center;background:#fff}
     .slide-frame img{max-width:100%;max-height:100%;object-fit:contain;display:block}
-    .slider button{position:absolute;top:50%;transform:translateY(-50%);background:rgba(99,179,237,.9);border:none;color:#fff;font-size:22px;padding:8px 12px;cursor:pointer;border-radius:50%;transition:.3s}
-    .slider button:hover{background:rgba(99,179,237,1)}
-    .slider .prev{left:10px}.slider .next{right:10px}
 
     footer{padding:28px 0;color:var(--text-dim)}
-    @media (max-width:980px){.hero{grid-template-columns:1fr}.hero img{order:-1;margin-bottom:20px}.grid-2{grid-template-columns:1fr}}
-    @media (max-width:640px){.nav a{margin-left:12px}.title{font-size:30px}}
+    :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+    /* ===== reveal 초기 상태 ===== */
+    .reveal{opacity:0;transform:translateY(28px)}
+    .reveal.fade-right{transform:translateX(-28px)}
+    .reveal.zoom{transform:scale(.98);opacity:0}
+
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .hero img{order:-1;margin-bottom:20px}
+      .grid-2{grid-template-columns:1fr}
+      .bio-card{grid-template-columns:1fr}
+      .bio-photo{border-right:0;border-bottom:2px solid var(--edge)}
+      .bio-table{grid-template-columns:160px 1fr}
+      .activities-table{grid-template-columns:200px 1fr}
+    }
+    @media (max-width:640px){
+      .nav a{margin-left:12px}
+      .title{font-size:30px}
+      .bio-photo img{width:140px;height:180px}
+      .bio-table{grid-template-columns:130px 1fr}
+      .activities-table{grid-template-columns:160px 1fr}
+    }
+
+    /* 모션 최소화 사용자 존중 */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal{opacity:1 !important;transform:none !important}
+      .hero img{transform:none !important}
+    }
+
+
+/* 🌞🌙 토글 버튼 스타일 */
+.theme-toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin-left: 8px;
+}
+.theme-toggle img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 24px;
+  height: 24px;
+  transition: opacity .5s ease, transform .6s ease;
+}
+.theme-toggle img.sun {
+  opacity: 1;
+  transform: scale(1);
+  filter: drop-shadow(0 0 5px #facc15);
+}
+.theme-toggle img.moon {
+  opacity: 0;
+  transform: scale(.5);
+  filter: drop-shadow(0 0 5px #7dd3fc);
+}
+[data-theme="dark"] .theme-toggle img.sun {
+  opacity: 0;
+  transform: scale(.5);
+}
+[data-theme="dark"] .theme-toggle img.moon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 배경/텍스트 전환 부드럽게 */
+body {
+  transition: background .6s ease, color .6s ease;
+}
+/* 다크 테마 팔레트 */
+[data-theme="dark"]{
+  --bg:#0f172a; 
+  --panel:#1e293b; 
+  --text:#e2e8f0; 
+  --text-dim:#94a3b8;
+  --accent:#7dd3fc; 
+  --edge:#334155; 
+  --glow:0 0 14px rgba(125,211,252,.25);
+}
+
+/* 헤더/브랜드 텍스트는 항상 변수 사용 */
+header { background:rgba(255,255,255,.9); border-bottom:2px solid var(--edge); }
+[data-theme="dark"] header { background:rgba(15,23,42,.85); }
+.brand h1 { color: var(--text); }
+.nav a { color: var(--text-dim); }
+.nav a:hover { color: var(--accent); }
+
+
+/* ===== 슬라이더 화살표 버튼 (다크모드 대응 포함) ===== */
+.slider { position:relative; }
+
+.slider .prev,
+.slider .next {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:44px; height:44px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:none;
+  cursor:pointer;
+  z-index:5;
+  background:rgba(0,0,0,.35);
+  color:#fff;
+  font-size:20px;
+  line-height:1;
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
+  transition:background .2s ease, opacity .2s ease;
+  opacity:.9;
+  user-select:none;
+}
+
+.slider .prev { left:12px; }
+.slider .next { right:12px; }
+.slider .prev:hover, .slider .next:hover {
+  background:rgba(0,0,0,.5);
+}
+
+/* 다크모드일 때 색 반전 */
+[data-theme="dark"] .slider .prev,
+[data-theme="dark"] .slider .next {
+  background:rgba(255,255,255,.18);
+}
+[data-theme="dark"] .slider .prev:hover,
+[data-theme="dark"] .slider .next:hover {
+  background:rgba(255,255,255,.28);
+}
+
+
+
+/* === Tooltip (chips & 기타 프로젝트 공통) === */
+.tooltip { position: relative; display: inline-block; z-index: 50; }
+.tooltip .chip { cursor: help; }
+
+.tooltiptext{
+  visibility:hidden; opacity:0;
+  position:absolute; bottom:125%; left:50%;
+  transform:translateX(-50%) translateY(6px);
+  min-width:220px; max-width:320px;
+  padding:10px 12px; border-radius:8px;
+  font-size:12px; line-height:1.45; white-space:normal;
+  pointer-events:none; transition:opacity .22s ease, transform .22s ease;
+  background:rgba(30,41,59,.96); color:#f8fafc;
+  border:1px solid rgba(99,179,237,.35);
+  box-shadow:0 6px 18px rgba(0,0,0,.2);
+}
+.tooltip:hover .tooltiptext{
+  visibility:visible; opacity:1; transform:translateX(-50%) translateY(0);
+}
+[data-theme="dark"] .tooltiptext{
+  background:rgba(241,245,249,.97); color:#0f172a;
+  border:1px solid rgba(125,211,252,.4);
+  box-shadow:0 6px 16px rgba(255,255,255,.08);
+}
+
+/* 칩이 화면 상단에 가까워 위로 못 뜨면, 아래로 뜨게 하는 보조 클래스 */
+.tooltip.bottom .tooltiptext { bottom:auto; top:125%; }
+
+
   </style>
 </head>
 <body>
-  <header>
+  <header class="reveal">
     <div class="wrap nav">
       <div class="brand">
-        <div class="logo"></div>
+        <div class="logo" aria-hidden="true"></div>
         <h1>Yun Eunno · Math EdTech Contents Planner</h1>
       </div>
       <nav>
         <a href="#about">소개</a>
+        <a href="#basics">기본정보</a>
         <a href="#skills">역량</a>
         <a href="#projects">프로젝트</a>
         <a href="#timeline">활동</a>
         <a href="#contact">연락처</a>
+        <button class="theme-toggle" id="themeBtn" aria-label="테마 전환">
+          <img src="./assets/sun.png" alt="라이트모드" class="sun">
+          <img src="./assets/moon.png" alt="다크모드" class="moon">
+        </button>
       </nav>
     </div>
   </header>
@@ -83,113 +331,199 @@
   <main class="wrap">
     <!-- HERO -->
     <section class="hero" id="about">
-      <div>
+      <div class="reveal zoom">
         <span class="badge">Math · EdTech · Planning</span>
         <h2 class="title">아이들이 즐겁게 등교하도록, 수학을 <em style="color:var(--accent);font-style:normal">경험으로 디자인</em>합니다.</h2>
         <p class="subtitle">수학교육과에서 다진 <b>논리적·구조화된 사고</b>와 현장의 인사이트로, 학습자 중심의 수학 교육 콘텐츠를 기획합니다. 데이터를 기반으로 가설을 검증하고, 교사·학생·조직의 <b>요구를 연결</b>해 실행까지 완주합니다.</p>
         <div class="cta">
           <a class="btn" href="#projects">대표 프로젝트 보기</a>
-          <a class="btn secondary" href="#contact">이력서</a>
+          <a class="btn secondary" href="./assets/eunno_resume.pdf" download>이력서</a>
         </div>
       </div>
-      <img src="./assets/profile.jpg" alt="은노 윤 프로필" />
+      <!-- 패럴랙스용 data-speed -->
+      <img class="parallax" data-speed="0.15" src="./assets/profile.jpg" alt="은노 윤 프로필 사진" loading="eager" decoding="async" />
+    </section>
+
+    <!-- BASICS -->
+    <section id="basics" class="reveal">
+      <h2>기본 정보</h2>
+      <div class="bio-card">
+        <div class="bio-photo reveal fade-right">
+          <img src="./assets/윤은노 증명사진.jpg" alt="윤은노 증명사진" loading="lazy" decoding="async">
+        </div>
+        <div class="bio-table">
+          <div class="th">이름</div><div class="td">윤은노</div>
+          <div class="th">생년월일 / 나이</div><div class="td">2000.09.11 (만 25세)</div>
+
+          <div class="th">주소</div><div class="td">강원도 춘천시</div>
+          <div class="th">휴대폰</div><div class="td"><a href="tel:01066290655">010-6629-0655</a></div>
+
+          <div class="th">이메일</div><div class="td"><a href="mailto:dmssh2000911@gmail.com">dmssh2000911@gmail.com</a></div>
+          <div class="th">학력</div><div class="td">충북대학교 수학교육과 재학 (26년 2월 졸업예정)</div>
+
+          <div class="th">학점</div><div class="td">3.97 (전공 4.16)</div>
+          <div class="th">병역</div><div class="td">군필</div>
+
+          <div class="th">희망 직무</div><div class="td">교육 콘텐츠 기획 / 에듀테크 PM</div>
+        </div>
+      </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills">
+    <section id="skills" class="reveal">
       <h2>핵심 역량 & 도구</h2>
       <div class="grid-2">
-        <div class="panel">
+        <div class="panel reveal">
           <h3>핵심 역량</h3>
-          <ul class="bullet">
-            <li><b class="tooltip">직업 전문성<span class="tooltiptext">교육실습: 딘즈·브루너 이론 기반 활동형 설계</span></b> — 교육적 목표와 실제 현장을 잇는 실무형 기획</li>
-            <li><b class="tooltip">시장 분석력<span class="tooltiptext">교육 트렌드·학습자 데이터 분석 → 전략 도출</span></b> — 데이터 기반 콘텐츠 전략 수립</li>
-            <li><b class="tooltip">기획력과 창의력<span class="tooltiptext">논리적 구조화 + 창의적 UX로 학습경험 설계</span></b> — 즐거운 학습 경험 디자인</li>
-            <li><b class="tooltip">의사소통 능력<span class="tooltiptext">이해관계자 조율/협업 → 실행력 확보</span></b> — 협력 중심 커뮤니케이션</li>
+          <ul>
+            <li><b>직업 전문성</b> — 교육적 목표와 실제 현장을 잇는 실무형 기획</li>
+            <li><b>시장 분석력</b> — 데이터 기반 콘텐츠 전략 수립</li>
+            <li><b>기획력·창의력</b> — 논리적 구조화 + 창의적 UX로 학습경험 설계</li>
+            <li><b>의사소통</b> — 이해관계자 조율/협업으로 실행력 확보</li>
           </ul>
         </div>
-        <div class="panel">
+        <div class="panel reveal">
           <h3>사용 도구</h3>
           <div class="chips">
-            <span class="chip tooltip">Python<span class="tooltiptext">데이터 분석, 데이터 시각화</span></span>
-            <span class="chip tooltip">Figma<span class="tooltiptext">디자인 구현 및 프로토타입 제작</span></span>
-            <span class="chip tooltip">Slack · Notion<span class="tooltiptext">업무 관계자와 협업 및 일정 관리</span></span>
-            <span class="chip tooltip">Cursor AI<span class="tooltiptext">프론트엔드 및 백엔드</span></span>
+            <span class="tooltip">
+              <span class="chip">Python</span>
+              <span class="tooltiptext">데이터 처리 · 자동화 · 간단한 분석/시각화</span>
+            </span>
+          
+            <span class="tooltip">
+              <span class="chip">Pandas</span>
+              <span class="tooltiptext">테이블 데이터 전처리 · 통계 요약 · 머지/조인</span>
+            </span>
+          
+            <span class="tooltip">
+              <span class="chip">Matplotlib</span>
+              <span class="tooltiptext">분포/추세 시각화 · 커스텀 그래프 제작</span>
+            </span>
+          
+            <span class="tooltip">
+              <span class="chip">Figma</span>
+              <span class="tooltiptext">와이어프레임 · 프로토타입 · 디자인 시스템</span>
+            </span>
+          
+            <span class="tooltip">
+              <span class="chip">Slack · Notion</span>
+              <span class="tooltiptext">협업 커뮤니케이션 · 태스크/문서 관리</span>
+            </span>
+          
+            <span class="tooltip">
+              <span class="chip">Cursor AI</span>
+              <span class="tooltiptext">코드 리팩토링 · 개발 효율 향상 · 리뷰 보조</span>
+            </span>
           </div>
+          
+
+          <h3 style="margin:20px 0 8px"><b>교육/이수</b></h3>
+          <p class="meta">에듀테크 PM 13기 (천재 IT 교육센터) — 개발 프로세스, 요구사항 정의, 피그마 프로토타입, POC 제작, 데이터 분석</p>
+
           <h3 style="margin:20px 0 8px"><b>자격증</b></h3>
           <p class="meta">중등학교 2급 정교사 (수학)</p>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS (2개, PNG) -->
-    <section id="projects">
+    <!-- PROJECTS -->
+    <section id="projects" class="reveal">
       <h2>대표 프로젝트</h2>
 
-      <!-- 어쓰폴리오 -->
-      <div class="panel" style="margin-bottom:40px">
+      <div class="panel reveal">
         <h3>어쓰폴리오 — AI 생활기록부 사이트 UX/UI 개선</h3>
-        <div class="slider">
-          <div class="slides">
-            <div class="slide-frame"><img src="./assets/usfolio_1.png" alt="어쓰폴리오 화면 1"></div>
-            <div class="slide-frame"><img src="./assets/usfolio_2.png" alt="어쓰폴리오 화면 2"></div>
-            <div class="slide-frame"><img src="./assets/usfolio_3.png" alt="어쓰폴리오 화면 3"></div>
-            <div class="slide-frame"><img src="./assets/usfolio_4.png" alt="어쓰폴리오 화면 4"></div>
-            <div class="slide-frame"><img src="./assets/usfolio_5.png" alt="어쓰폴리오 화면 5"></div>
+        <div class="slider" role="region" aria-label="어쓰폴리오 스크린샷" aria-live="polite">
+          <div class="slides" aria-atomic="true">
+            <div class="slide-frame"><img src="./assets/usfolio_1.png" alt="어쓰폴리오 화면 1" loading="lazy" decoding="async"></div>
+            <div class="slide-frame"><img src="./assets/usfolio_2.png" alt="어쓰폴리오 화면 2" loading="lazy" decoding="async"></div>
+            <div class="slide-frame"><img src="./assets/usfolio_3.png" alt="어쓰폴리오 화면 3" loading="lazy" decoding="async"></div>
+            <div class="slide-frame"><img src="./assets/usfolio_4.png" alt="어쓰폴리오 화면 4" loading="lazy" decoding="async"></div>
+            <div class="slide-frame"><img src="./assets/usfolio_5.png" alt="어쓰폴리오 화면 5" loading="lazy" decoding="async"></div>
           </div>
           <button class="prev" aria-label="이전">&#10094;</button>
           <button class="next" aria-label="다음">&#10095;</button>
         </div>
       </div>
 
-      <!-- 꽃길 -->
-      <div class="panel">
+      <div class="panel reveal">
         <h3>꽃길 — 맞춤형 진로 탐색 어플</h3>
-        <div class="slider">
-          <div class="slides">
-            <div class="slide-frame"><img src="./assets/ggotgil_1.png" alt="꽃길 화면 1"></div>
-            <div class="slide-frame"><img src="./assets/ggotgil_2.png" alt="꽃길 화면 2"></div>
-            <div class="slide-frame"><img src="./assets/ggotgil_3.png" alt="꽃길 화면 3"></div>
-            <div class="slide-frame"><img src="./assets/ggotgil_4.png" alt="꽃길 화면 4"></div>
-            <div class="slide-frame"><img src="./assets/ggotgil_5.png" alt="꽃길 화면 5"></div>
-            <div class="slide-frame"><img src="./assets/ggotgil_6.png" alt="꽃길 화면 6"></div>
-            <div class="slide-frame"><img src="./assets/ggotgil_7.png" alt="꽃길 화면 7"></div>
+        <div class="slider" role="region" aria-label="꽃길 스크린샷" aria-live="polite">
+          <div class="slides" aria-atomic="true">
+            <div class="slide-frame"><img src="./assets/ggotgil_1.png" alt="꽃길 화면 1" loading="lazy" decoding="async"></div>
+            <div class="slide-frame"><img src="./assets/ggotgil_2.png" alt="꽃길 화면 2" loading="lazy" decoding="async"></div>
+            <div class="slide-frame"><img src="./assets/ggotgil_3.png" alt="꽃길 화면 3" loading="lazy" decoding="async"></div>
+            <div class="slide-frame"><img src="./assets/ggotgil_4.png" alt="꽃길 화면 4" loading="lazy" decoding="async"></div>
+            <div class="slide-frame"><img src="./assets/ggotgil_5.png" alt="꽃길 화면 5" loading="lazy" decoding="async"></div>
+            <div class="slide-frame"><img src="./assets/ggotgil_6.png" alt="꽃길 화면 6" loading="lazy" decoding="async"></div>
+            <div class="slide-frame"><img src="./assets/ggotgil_7.png" alt="꽃길 화면 7" loading="lazy" decoding="async"></div>
           </div>
           <button class="prev" aria-label="이전">&#10094;</button>
           <button class="next" aria-label="다음">&#10095;</button>
         </div>
+      </div>
+
+      <!-- 기타 프로젝트 -->
+      <div class="panel reveal" style="margin-top:40px">
+        <h3>기타 프로젝트</h3>
+        <ul>
+          <li>
+            <span class="tooltip">
+              수학 멀티모달형 문제풀이 튜터링 대화 데이터 구축
+              <span class="tooltiptext">초등학생 페르소나 설정 — 시나리오 문항 301개, 시나리오 813개 구축</span>
+            </span>
+          </li>
+          <li>
+            <span class="tooltip">
+              한국사 교육 어플리케이션 라떼 한국사
+              <span class="tooltiptext">날짜 기반 한국사 교양 앱 — 5분 내외 콘텐츠를 만화 형식으로 제공</span>
+            </span>
+          </li>
+          <li>
+            <span class="tooltip">
+              안전한 대중교통 이용을 위한 균형자세 영상 컨텐츠 제작
+              <span class="tooltiptext">안전 자세 5분 영상 · 교수학습지도안 · 스토리보드 포함</span>
+            </span>
+          </li>
+          <li>
+            <span class="tooltip">
+              대학수학능력시험 국어·수학 상관관계 데이터 분석
+              <span class="tooltiptext">Python/Matplotlib 전처리 후 상관관계 분석 · 정규성 검증</span>
+            </span>
+          </li>
+          <li>
+            <span class="tooltip">
+              콘텐츠 마케팅, HRD | 마이크로러닝 콘텐츠 공모전
+              <span class="tooltiptext">HRD 업무 간접 경험 · 3분 내외 마이크로러닝 콘텐츠 제작</span>
+            </span>
+          </li>
+        </ul>
       </div>
     </section>
 
     <!-- TIMELINE & AWARDS -->
-    <section id="timeline">
+    <section id="timeline" class="reveal">
       <h2>주요 활동</h2>
       <div class="grid-2">
-        <div class="panel timeline">
-          <div class="tl-item"><b>춘천시 YMCA 청소년운영위원회</b><div class="date">일자 : 2016.02 ~ 2017.01</div></div>
-          <div class="tl-item"><b>충북대학교 수학교육과 학생회장 · 사범대학 운영위원회 기획부</b><div class="date">일자 : 2023.08 ~ 2024.07</div></div>
-          <div class="tl-item"><b>해외 교육봉사 (인도네시아, 네팔)</b><div class="date">일자 : 2024.01.13 ~ 2024.02.09 / 2024.07.31 ~ 2024.08.29</div></div>
-          <div class="tl-item"><b>GTU 다문화 교육 토론대회</b><div class="date">일자 : 2024.12.18</div></div>
-          <div class="tl-item"><b>대한수학회 조교</b><div class="date">일자 : 2025.01.05 ~ 2025.01.08</div></div>
+        <div class="activities-table reveal">
+          <div class="th">춘천시 YMCA 청소년운영위원회</div><div class="td">2016.02 ~ 2017.01</div>
+          <div class="th">충북대 수학교육과 학생회장 · 사범대 운영위 기획부</div><div class="td">2023.08 ~ 2024.07</div>
+          <div class="th">해외 교육봉사 (인도네시아, 네팔)</div><div class="td">2024.01.13 ~ 2024.02.09 / 2024.07.31 ~ 2024.08.29</div>
+          <div class="th">GTU 다문화 교육 토론대회</div><div class="td">2024.12.18</div>
+          <div class="th">대한수학회 조교</div><div class="td">2025.01.05 ~ 2025.01.08</div>
         </div>
 
-        <div class="panel">
+        <div class="panel reveal">
           <h3><b>수상 경력</b></h3>
-          <ul class="bullet" style="margin:0">
+          <ul style="margin:0">
             <li>
-              <b>[대한수학회]</b> <b>제41회</b> 대학생 수학 경시대회 <b>동상</b>
-              <a class="chip" href="./assets/awards_kms41.pdf" download style="margin-left:8px">📎 증빙 다운로드</a><br/>
+              <b>[대한수학회]</b> 제41회 대학생 수학 경시대회 동상<br/>
+              <a href="./assets/awards_kms41.pdf" download>📎 증빙 다운로드</a><br/>
               <span class="date">일자 : 2023.12.06</span>
             </li>
             <li style="margin-top:10px">
-              <b>[한국교원대학교]</b> GTU 사업 <b>토론대회 최우수상</b>
-              <a class="chip" href="./assets/awards_gtu.pdf" download style="margin-left:8px">📎 증빙 다운로드</a><br/>
+              <b>[한국교원대학교]</b> GTU 사업 토론대회 최우수상<br/>
+              <a href="./assets/awards_gtu.pdf" download>📎 증빙 다운로드</a><br/>
               <span class="date">일자 : 2024.12.18</span>
-            </li>
-            <li style="margin-top:10px">
-              <b>[주최]</b> 대회 이름 <b>수상</b>
-              <a class="chip" href="#" download style="margin-left:8px">📎 증빙 다운로드</a><br/>
-              <span class="date">일자 : YYYY.MM.DD</span>
             </li>
           </ul>
         </div>
@@ -197,15 +531,15 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="reveal">
       <h2>연락처</h2>
       <div class="grid-2">
-        <div class="panel">
+        <div class="panel reveal">
           <p style="margin:0 0 8px">함께 <b>학생이 즐겁게 배우는 경험</b>을 만들고 싶습니다.</p>
           <p class="meta">이메일: <a href="mailto:dmssh2000911@gmail.com?subject=%5BPortfolio%5D%20Inquiry%20from%20Website">dmssh2000911@gmail.com</a></p>
           <p class="meta">전화: <a href="tel:01066290655">010-6629-0655</a></p>
         </div>
-        <div class="panel">
+        <div class="panel reveal">
           <div class="chips">
             <a class="chip" href="./assets/eunno_resume.pdf" download>이력서(PDF) 다운로드</a>
           </div>
@@ -214,15 +548,19 @@
     </section>
   </main>
 
-  <footer class="wrap">
+  <footer class="wrap reveal">
     <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
       <small>© 2025 Eunno Yun. All rights reserved.</small>
-      <small class="meta">Built with plain HTML/CSS · Light theme · Palette: #1a202c · #4a5568 · #63b3ed</small>
+      <small class="meta">Built with plain HTML/CSS · Palette: #1a202c · #475569 · #63b3ed · Lines:#cbd5e1</small>
     </div>
   </footer>
 
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
   <script>
-    // Smooth in-page scroll
+    // ===== Smooth in-page scroll
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
         const id=a.getAttribute('href').slice(1);
@@ -231,21 +569,21 @@
       });
     });
 
-    // Slider (absolute 없이 안정 버전)
+    // ===== Slider (as-is)
     document.querySelectorAll('.slider').forEach(slider=>{
       let index=0;
       const slides=slider.querySelector('.slides');
+      if(!slides) return;
       const frames=slides.querySelectorAll('.slide-frame');
       const prev=slider.querySelector('.prev');
       const next=slider.querySelector('.next');
+      if(!prev || !next || !frames.length) return;
 
       function show(n){
-        if(!frames.length) return;
         index=(n+frames.length)%frames.length;
-        slides.style.transform=`translateX(-${index*100}%)`;
+        slides.style.transform = `translateX(-${index*100}%)`;
       }
       show(0);
-
       prev.addEventListener('click',()=>show(index-1));
       next.addEventListener('click',()=>show(index+1));
 
@@ -258,7 +596,145 @@
         if(Math.abs(dx)>50){ show(index+(dx<0?1:-1)); startX=null; }
       },{passive:true});
     });
-  </script>
-</body>
-</html>
 
+// ===== Animations (GSAP)
+window.addEventListener('load', ()=>{
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+    document.querySelectorAll('.reveal').forEach(el=>{el.style.opacity=1;el.style.transform='none';});
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // 💫 공통 설정
+  const defaultEase = 'power2.out';  // 더 자연스러운 스르륵 느낌
+  const fastEase = 'power3.out';
+
+  // 1️⃣ 섹션 전체 fade-up (스르륵 올라옴)
+  gsap.utils.toArray('.reveal').forEach(el=>{
+    gsap.fromTo(el,
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.9, // 조금 짧게
+        ease: defaultEase,
+        delay: 0.05,
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse'
+        }
+      }
+    );
+  });
+
+  // 2️⃣ 핵심역량 / 대표프로젝트 / 연락처 패널 (더 부드럽게 스르륵)
+  ['#skills', '#projects', '#contact'].forEach(sel=>{
+    const panels = document.querySelectorAll(`${sel} .panel`);
+    gsap.from(panels, {
+      opacity: 0,
+      y: 35,
+      duration: 1.1,
+      ease: 'power4.out', // 더 부드러운 감속
+      stagger: 0.12,
+      scrollTrigger: {
+        trigger: sel,
+        start: 'top 85%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  });
+
+  // 3️⃣ Hero 텍스트: 빠르게 시작해서 서서히 멈춤 (살짝 줌 효과)
+  gsap.fromTo('.reveal.zoom',
+    {opacity:0, scale:0.96, y:10},
+    {opacity:1, scale:1, y:0, duration:1, ease:'power3.out', delay:0.15}
+  );
+
+  // 4️⃣ Hero 이미지 패럴랙스
+  const heroImg = document.querySelector('.parallax[data-speed]');
+  if (heroImg) {
+    gsap.to(heroImg, {
+      yPercent: 12,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1
+      }
+    });
+  }
+
+  // 5️⃣ 표(기본정보, 주요활동) 스르륵 등장
+  gsap.from('.bio-table .th, .bio-table .td', {
+    opacity: 0,
+    y: 15,
+    duration: 0.8,
+    ease: fastEase,
+    stagger: 0.05,
+    scrollTrigger: { trigger: '#basics', start: 'top 80%' }
+  });
+
+  gsap.from('.activities-table .th, .activities-table .td', {
+    opacity: 0,
+    y: 15,
+    duration: 0.8,
+    ease: fastEase,
+    stagger: 0.05,
+    scrollTrigger: { trigger: '.activities-table', start: 'top 85%' }
+  });
+});
+
+  </script>
+  <!-- 🌙 다크모드 JS -->
+<script>
+  const themeBtn = document.getElementById('themeBtn');
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme');
+
+  // 저장된 테마 불러오기
+  if (saved === 'dark') {
+    root.setAttribute('data-theme', 'dark');
+  }
+
+  // 버튼 클릭 시 테마 전환
+  themeBtn.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+
+    // 해/달 회전 애니메이션
+    gsap.fromTo(
+      themeBtn.querySelector(isDark ? '.sun' : '.moon'),
+      { rotate: 0, scale: 1 },
+      { rotate: 360, scale: 1.2, duration: 0.6, ease: 'power2.out' }
+    );
+  });
+</script>
+
+</body>
+<script>
+  const themeBtn = document.getElementById('themeBtn');
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark') { root.setAttribute('data-theme', 'dark'); }
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      if (window.gsap) {
+        gsap.fromTo(
+          themeBtn.querySelector(isDark ? '.sun' : '.moon'),
+          { rotate: 0, scale: 1 },
+          { rotate: 360, scale: 1.2, duration: 0.6, ease: 'power2.out' }
+        );
+      }
+    });
+  }
+</script>
+</html>
